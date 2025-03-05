@@ -1,0 +1,500 @@
+<https://memorise.sdu.dk/semantics/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://memorise.sdu.dk/semantics/ontology/> <http://www.w3.org/2002/07/owl#versionIRI> <https://memorise.sdu.dk/semantics/ontology/v1/> .
+<https://memorise.sdu.dk/semantics/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology to represent historic and historiographic entities." .
+<https://memorise.sdu.dk/semantics/ontology/> <http://www.w3.org/2000/01/rdf-schema#label> "MEMORISE ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.w3.org/2002/07/owl#equivalentClass
+<http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://memorise.sdu.dk/semantics/schemator/schematize
+<https://memorise.sdu.dk/semantics/schemator/schematize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://memorise.sdu.dk/semantics/schemator/schematize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/NET/c4dm/event.owl#agent
+<http://purl.org/NET/c4dm/event.owl#agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/event.owl#agent> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/NET/c4dm/event.owl#isAgentIn> .
+<http://purl.org/NET/c4dm/event.owl#agent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<http://purl.org/NET/c4dm/event.owl#agent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://purl.org/NET/c4dm/event.owl#agent> <http://www.w3.org/2000/01/rdf-schema#label> "has agent" .
+# 
+# http://purl.org/NET/c4dm/event.owl#isAgentIn
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> <http://www.w3.org/2000/01/rdf-schema#label> "is agent in" .
+# 
+# http://purl.org/NET/c4dm/event.owl#place
+<http://purl.org/NET/c4dm/event.owl#place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/event.owl#place> <http://www.w3.org/2002/07/owl#inverseOf> <https://memorise.sdu.dk/semantics/ontology/wasLocationOf> .
+<http://purl.org/NET/c4dm/event.owl#place> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://purl.org/NET/c4dm/event.owl#place> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://purl.org/NET/c4dm/event.owl#place> <http://www.w3.org/2000/01/rdf-schema#label> "occurred in Place" .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://memorise.sdu.dk/semantics/ontology/Content> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Document> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/creator> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator of" .
+# 
+# http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Part Of" .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://memorise.sdu.dk/semantics/ontology/Content> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Document> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Organization> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "is published by" .
+# 
+# http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Organization> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#label> "has Member" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/controlled_by
+<https://memorise.sdu.dk/semantics/ontology/controlled_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/controlled_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/controlled_by> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Organization> .
+<https://memorise.sdu.dk/semantics/ontology/controlled_by> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/controlled_by> <http://www.w3.org/2000/01/rdf-schema#label> "was controlled by" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/initiated_event
+<https://memorise.sdu.dk/semantics/ontology/initiated_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/initiated_event> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/initiated_event> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/initiated_event> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/initiated_event> <http://www.w3.org/2000/01/rdf-schema#label> "initiated event" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/lived_in
+<https://memorise.sdu.dk/semantics/ontology/lived_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/lived_in> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/lived_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/lived_in> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/lived_in> <http://www.w3.org/2000/01/rdf-schema#label> "lived in" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/mentioned_In
+<https://memorise.sdu.dk/semantics/ontology/mentioned_In> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/mentioned_In> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<https://memorise.sdu.dk/semantics/ontology/mentioned_In> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Content> .
+<https://memorise.sdu.dk/semantics/ontology/mentioned_In> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/mentioned_In> <http://www.w3.org/2000/01/rdf-schema#label> "is mentioned in" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/wasLocationOf
+<https://memorise.sdu.dk/semantics/ontology/wasLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/wasLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/wasLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/wasLocationOf> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/wasLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "was location of" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/wasOwnedBy
+<https://memorise.sdu.dk/semantics/ontology/wasOwnedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/wasOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/wasOwnedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Physical_Object> .
+<https://memorise.sdu.dk/semantics/ontology/wasOwnedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/wasOwnedBy> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/wasOwnedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was owned by" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/was_Born_In
+<https://memorise.sdu.dk/semantics/ontology/was_Born_In> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/was_Born_In> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/was_Born_In> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/was_Born_In> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/was_Born_In> <http://www.w3.org/2000/01/rdf-schema#label> "was born in" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/was_created_by
+<https://memorise.sdu.dk/semantics/ontology/was_created_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/was_created_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/was_created_by> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Physical_Object> .
+<https://memorise.sdu.dk/semantics/ontology/was_created_by> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/was_created_by> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/was_created_by> <http://www.w3.org/2000/01/rdf-schema#label> "was created by" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/was_part_of
+<https://memorise.sdu.dk/semantics/ontology/was_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/was_part_of> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Physical_Object> .
+<https://memorise.sdu.dk/semantics/ontology/was_part_of> <http://www.w3.org/2000/01/rdf-schema#range> <https://memorise.sdu.dk/semantics/ontology/Physical_Object> .
+<https://memorise.sdu.dk/semantics/ontology/was_part_of> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/was_part_of> <http://www.w3.org/2000/01/rdf-schema#label> "was part of" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event
+<https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://memorise.sdu.dk/semantics/ontology/witnessed_event> .
+<https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event> <http://www.w3.org/2000/01/rdf-schema#label> "was perpetrator of event" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/was_victim_of_event
+<https://memorise.sdu.dk/semantics/ontology/was_victim_of_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/was_victim_of_event> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://memorise.sdu.dk/semantics/ontology/witnessed_event> .
+<https://memorise.sdu.dk/semantics/ontology/was_victim_of_event> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/was_victim_of_event> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/was_victim_of_event> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/was_victim_of_event> <http://www.w3.org/2000/01/rdf-schema#label> "was victim of event" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/witnessed_event
+<https://memorise.sdu.dk/semantics/ontology/witnessed_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://memorise.sdu.dk/semantics/ontology/witnessed_event> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/witnessed_event> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/witnessed_event> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/witnessed_event> <http://www.w3.org/2000/01/rdf-schema#label> "witnessed event" .
+# 
+# https://schema.org/isPartOf
+<https://schema.org/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://memorise.sdu.dk/semantics/ontology/Document_Collection> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Document> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://memorise.sdu.dk/semantics/ontology/Document_Collection> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://dbpedia.org/ontology/Archive> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Contained In" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://memorise.sdu.dk/semantics/ontology/Content> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Document> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "Title" .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "has latitude" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "has longitude" .
+# 
+# http://xmlns.com/foaf/0.1/familyName
+<http://xmlns.com/foaf/0.1/familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<http://xmlns.com/foaf/0.1/familyName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/familyName> <http://www.w3.org/2000/01/rdf-schema#label> "Family Name" .
+# 
+# http://xmlns.com/foaf/0.1/givenName
+<http://xmlns.com/foaf/0.1/givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<http://xmlns.com/foaf/0.1/givenName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/givenName> <http://www.w3.org/2000/01/rdf-schema#label> "Given Name" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/agesOfWriting
+<https://memorise.sdu.dk/semantics/ontology/agesOfWriting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://memorise.sdu.dk/semantics/ontology/agesOfWriting> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/agesOfWriting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://memorise.sdu.dk/semantics/ontology/agesOfWriting> <http://www.w3.org/2000/01/rdf-schema#label> "ages of writing" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/eventDescription
+<https://memorise.sdu.dk/semantics/ontology/eventDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://memorise.sdu.dk/semantics/ontology/eventDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/eventDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://memorise.sdu.dk/semantics/ontology/eventDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has event description" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/nationality
+<https://memorise.sdu.dk/semantics/ontology/nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://memorise.sdu.dk/semantics/ontology/nationality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/nationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://memorise.sdu.dk/semantics/ontology/nationality> <http://www.w3.org/2000/01/rdf-schema#label> "nationality" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/pseudonym
+<https://memorise.sdu.dk/semantics/ontology/pseudonym> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://memorise.sdu.dk/semantics/ontology/pseudonym> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/pseudonym> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://memorise.sdu.dk/semantics/ontology/pseudonym> <http://www.w3.org/2000/01/rdf-schema#label> "pseudonym" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution
+<https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution> <http://www.w3.org/2000/01/rdf-schema#label> "reason of persecution" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/time
+<https://memorise.sdu.dk/semantics/ontology/time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://memorise.sdu.dk/semantics/ontology/time> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/event.owl#Event> .
+<https://memorise.sdu.dk/semantics/ontology/time> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://memorise.sdu.dk/semantics/ontology/time> <http://www.w3.org/2000/01/rdf-schema#label> "happened at" .
+# 
+# https://schema.org/birthDate
+<https://schema.org/birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#range> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#label> "Date of Birth" .
+# 
+# https://schema.org/birthPlace
+<https://schema.org/birthPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/birthPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://schema.org/birthPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/birthPlace> <http://www.w3.org/2000/01/rdf-schema#label> "place of birth" .
+# 
+# https://schema.org/countryOfOrigin
+<https://schema.org/countryOfOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://schema.org/countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "country of origin" .
+# 
+# https://schema.org/gender
+<https://schema.org/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender" .
+# 
+# https://schema.org/hasOccupation
+<https://schema.org/hasOccupation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/hasOccupation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://schema.org/hasOccupation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/hasOccupation> <http://www.w3.org/2000/01/rdf-schema#label> "has Ocupation" .
+# 
+# https://schema.org/image
+<https://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#domain> <https://memorise.sdu.dk/semantics/ontology/Person> .
+<https://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://dati.cdec.it/lod/shoah/DetentionPlace
+<http://dati.cdec.it/lod/shoah/DetentionPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/DetentionPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://dati.cdec.it/lod/shoah/DetentionPlace> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+# 
+# http://dbpedia.org/ontology/Archive
+<http://dbpedia.org/ontology/Archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/Archive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historiographic> .
+<http://dbpedia.org/ontology/Archive> <http://www.w3.org/2000/01/rdf-schema#label> "Archive" .
+<http://dbpedia.org/ontology/Archive> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://purl.org/NET/c4dm/event.owl#Event
+<http://purl.org/NET/c4dm/event.owl#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/event.owl#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<http://purl.org/NET/c4dm/event.owl#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+<http://purl.org/NET/c4dm/event.owl#Event> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://purl.org/ontology/bibo/AudioDocument
+<http://purl.org/ontology/bibo/AudioDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/AudioDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+# 
+# http://purl.org/ontology/bibo/AudioVisualDocument
+<http://purl.org/ontology/bibo/AudioVisualDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/AudioVisualDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/bibo/AudioVisualDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Video"@en .
+# 
+# http://purl.org/ontology/bibo/Document
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historiographic> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#label> "Media Item" .
+<http://purl.org/ontology/bibo/Document> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://purl.org/ontology/bibo/DocumentPart
+<http://purl.org/ontology/bibo/DocumentPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/DocumentPart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/bibo/DocumentPart> <http://www.w3.org/2000/01/rdf-schema#label> "Document Section"@en .
+# 
+# http://purl.org/ontology/bibo/Image
+<http://purl.org/ontology/bibo/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/bibo/Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Barrack
+<https://memorise.sdu.dk/semantics/ontology/Barrack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Barrack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Building> .
+<https://memorise.sdu.dk/semantics/ontology/Barrack> <http://www.w3.org/2000/01/rdf-schema#label> "Barrack"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Building
+<https://memorise.sdu.dk/semantics/ontology/Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Compound
+<https://memorise.sdu.dk/semantics/ontology/Compound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Compound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/Compound> <http://www.w3.org/2000/01/rdf-schema#label> "Compound"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Content
+<https://memorise.sdu.dk/semantics/ontology/Content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Content> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historiographic> .
+<https://memorise.sdu.dk/semantics/ontology/Content> <http://www.w3.org/2000/01/rdf-schema#label> "Content Item" .
+<https://memorise.sdu.dk/semantics/ontology/Content> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Diary
+<https://memorise.sdu.dk/semantics/ontology/Diary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Diary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Content> .
+<https://memorise.sdu.dk/semantics/ontology/Diary> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/Diary> <http://www.w3.org/2000/01/rdf-schema#label> "Diary" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Document_Collection
+<https://memorise.sdu.dk/semantics/ontology/Document_Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Document_Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historiographic> .
+<https://memorise.sdu.dk/semantics/ontology/Document_Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Document Collection"@en .
+<https://memorise.sdu.dk/semantics/ontology/Document_Collection> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Exhibition_Space
+<https://memorise.sdu.dk/semantics/ontology/Exhibition_Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Exhibition_Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historiographic> .
+<https://memorise.sdu.dk/semantics/ontology/Exhibition_Space> <http://www.w3.org/2000/01/rdf-schema#label> "Exhibition Space"@en .
+<https://memorise.sdu.dk/semantics/ontology/Exhibition_Space> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Geographical_Feature
+<https://memorise.sdu.dk/semantics/ontology/Geographical_Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Geographical_Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://memorise.sdu.dk/semantics/ontology/Geographical_Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Geographical Feature"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Historical
+<https://memorise.sdu.dk/semantics/ontology/Historical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Historical> <http://www.w3.org/2000/01/rdf-schema#label> "Historical"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Historiographic
+<https://memorise.sdu.dk/semantics/ontology/Historiographic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Historiographic> <http://www.w3.org/2000/01/rdf-schema#label> "Historiographic"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Interview
+<https://memorise.sdu.dk/semantics/ontology/Interview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Interview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Content> .
+<https://memorise.sdu.dk/semantics/ontology/Interview> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+<https://memorise.sdu.dk/semantics/ontology/Interview> <http://www.w3.org/2000/01/rdf-schema#label> "Interview" .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Organization
+<https://memorise.sdu.dk/semantics/ontology/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<https://memorise.sdu.dk/semantics/ontology/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+<https://memorise.sdu.dk/semantics/ontology/Organization> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Person
+<https://memorise.sdu.dk/semantics/ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<https://memorise.sdu.dk/semantics/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+<https://memorise.sdu.dk/semantics/ontology/Person> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Physical
+<https://memorise.sdu.dk/semantics/ontology/Physical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Physical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Exhibition_Space> .
+<https://memorise.sdu.dk/semantics/ontology/Physical> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Exhibition Space"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Physical_Object
+<https://memorise.sdu.dk/semantics/ontology/Physical_Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Physical_Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historical> .
+<https://memorise.sdu.dk/semantics/ontology/Physical_Object> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Object"@en .
+<https://memorise.sdu.dk/semantics/ontology/Physical_Object> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://memorise.sdu.dk/semantics/ontology/TextDocument
+<https://memorise.sdu.dk/semantics/ontology/TextDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/TextDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<https://memorise.sdu.dk/semantics/ontology/TextDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Text"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/Virtual
+<https://memorise.sdu.dk/semantics/ontology/Virtual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/Virtual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Exhibition_Space> .
+<https://memorise.sdu.dk/semantics/ontology/Virtual> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual Exhibition Space"@en .
+# 
+# https://memorise.sdu.dk/semantics/ontology/3D_Model
+<https://memorise.sdu.dk/semantics/ontology/3D_Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://memorise.sdu.dk/semantics/ontology/3D_Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<https://memorise.sdu.dk/semantics/ontology/3D_Model> <http://www.w3.org/2000/01/rdf-schema#label> "3D Model"@en .
+# 
+# https://www.ica.org/standards/RiC/ontology#Instantiation
+<https://www.ica.org/standards/RiC/ontology#Instantiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ica.org/standards/RiC/ontology#Instantiation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://memorise.sdu.dk/semantics/ontology/Historiographic> .
+<https://www.ica.org/standards/RiC/ontology#Instantiation> <http://www.w3.org/2000/01/rdf-schema#label> "Instantiation" .
+<https://www.ica.org/standards/RiC/ontology#Instantiation> <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1611 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://purl.org/NET/c4dm/event.owl", "https://www.ica.org/standards/RiC/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2001/XMLSchema", "http://dbpedia.org/ontology", "https://memorise.sdu.dk/semantics/ontology", "http://purl.org/ontology/bibo", "http://dati.cdec.it/lod/shoah", "http://www.w3.org/2003/01/geo/wgs84_pos", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://purl.org/dc/terms", "http://xmlns.com/foaf/0.1" ],
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/",
+    "labels" : {
+      "undefined" : "MEMORISE ontology"
+    },
+    "comments" : {
+      "undefined" : "An ontology to represent historic and historiographic entities."
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "94",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "111",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "107",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/ontology/bibo/Image",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Image",
+      "en" : "Image"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/Document",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Document",
+      "undefined" : "Media Item"
+    },
+    "subClasses" : [ "8", "9", "10", "11", "12", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://purl.org/NET/c4dm/event.owl#Event",
+    "baseIri" : "http://purl.org/NET/c4dm/event.owl",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "13" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "25" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://www.ica.org/standards/RiC/ontology#Instantiation",
+    "baseIri" : "https://www.ica.org/standards/RiC/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Instantiation",
+      "undefined" : "Instantiation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/AudioVisualDocument",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AudioVisualDocument",
+      "en" : "Video"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Compound",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Compound",
+      "en" : "Compound"
+    },
+    "id" : "35",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Diary",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Diary",
+      "undefined" : "Diary"
+    },
+    "id" : "36",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://dbpedia.org/ontology/Archive",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Archive",
+      "undefined" : "Archive"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Physical_Object",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Physical_Object",
+      "en" : "Physical Object"
+    },
+    "id" : "50",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Document_Collection",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Document_Collection",
+      "en" : "Document Collection"
+    },
+    "id" : "56",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialThing",
+      "en" : "Place"
+    },
+    "subClasses" : [ "73", "35", "74", "75" ],
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/TextDocument",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TextDocument",
+      "en" : "Text"
+    },
+    "id" : "11",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Interview",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Interview",
+      "undefined" : "Interview"
+    },
+    "id" : "69",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Person",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "id" : "4",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Exhibition_Space",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Exhibition_Space",
+      "en" : "Exhibition Space"
+    },
+    "subClasses" : [ "89", "87" ],
+    "id" : "54",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Physical",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Physical",
+      "en" : "Physical Exhibition Space"
+    },
+    "id" : "89",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Barrack",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Barrack",
+      "en" : "Barrack"
+    },
+    "id" : "72",
+    "superClasses" : [ "73" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Virtual",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Virtual",
+      "en" : "Virtual Exhibition Space"
+    },
+    "id" : "87",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "http://dati.cdec.it/lod/shoah/DetentionPlace",
+    "baseIri" : "http://dati.cdec.it/lod/shoah",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DetentionPlace"
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Geographical_Feature",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Geographical_Feature",
+      "en" : "Geographical Feature"
+    },
+    "id" : "75",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Historical",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Historical",
+      "en" : "Historical"
+    },
+    "subClasses" : [ "5", "4", "50", "25", "80" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Building",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Building",
+      "en" : "Building"
+    },
+    "subClasses" : [ "72" ],
+    "id" : "73",
+    "superClasses" : [ "25" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "56", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "48"
+  }, {
+    "instances" : 0,
+    "union" : [ "56", "45" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "49"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "111"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Organization",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Organization",
+      "undefined" : "Organization"
+    },
+    "id" : "80",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/3D_Model",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "3D_Model",
+      "en" : "3D Model"
+    },
+    "id" : "12",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Content",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "schematize" : [ {
+        "identifier" : "schematize",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Content",
+      "undefined" : "Content Item"
+    },
+    "subClasses" : [ "69", "36" ],
+    "id" : "37",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/DocumentPart",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DocumentPart",
+      "en" : "Document Section"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/Historiographic",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Historiographic",
+      "en" : "Historiographic"
+    },
+    "subClasses" : [ "32", "56", "37", "45", "2", "54" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/AudioDocument",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AudioDocument"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "2" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/NET/c4dm/event.owl#agent",
+    "inverse" : "6",
+    "baseIri" : "http://purl.org/NET/c4dm/event.owl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "agent",
+      "undefined" : "has agent"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external" ],
+    "id" : "3"
+  }, {
+    "range" : "2",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "17",
+    "subproperty" : [ "18", "19", "20", "21" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/initiated_event",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "initiated_event",
+      "undefined" : "initiated event"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "2",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "2",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/wasLocationOf",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasLocationOf",
+      "undefined" : "was location of"
+    },
+    "domain" : "25",
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/eventDescription",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "eventDescription",
+      "undefined" : "has event description"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/givenName",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "givenName",
+      "undefined" : "Given Name"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://schema.org/isPartOf",
+    "baseIri" : "https://schema.org",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "undefined" : "is Contained In"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "48",
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/time",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "time",
+      "undefined" : "happened at"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "range" : "7",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "reasonOfPersecution",
+      "undefined" : "reason of persecution"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://purl.org/NET/c4dm/event.owl#isAgentIn",
+    "baseIri" : "http://purl.org/NET/c4dm/event.owl",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "isAgentIn",
+      "undefined" : "is agent in"
+    },
+    "domain" : "24",
+    "attributes" : [ "object", "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/was_victim_of_event",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "was_victim_of_event",
+      "undefined" : "was victim of event"
+    },
+    "superproperty" : [ "58" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://schema.org/hasOccupation",
+    "baseIri" : "https://schema.org",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasOccupation",
+      "undefined" : "has Ocupation"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "long",
+      "undefined" : "has longitude"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/pseudonym",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "pseudonym",
+      "undefined" : "pseudonym"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://schema.org/countryOfOrigin",
+    "baseIri" : "https://schema.org",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "countryOfOrigin",
+      "undefined" : "country of origin"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "63"
+  }, {
+    "range" : "7",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "7",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "7",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "7",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "37",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://purl.org/dc/terms/isPartOf",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "undefined" : "is Part Of"
+    },
+    "domain" : "10",
+    "attributes" : [ "object", "external" ],
+    "id" : "70"
+  }, {
+    "range" : "73",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://schema.org/birthDate",
+    "baseIri" : "https://schema.org",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "birthDate",
+      "undefined" : "Date of Birth"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "76"
+  }, {
+    "range" : "7",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "37",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "13",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "79"
+  }, {
+    "range" : "13",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "lat",
+      "undefined" : "has latitude"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "was_perpetrator_of_event",
+      "undefined" : "was perpetrator of event"
+    },
+    "superproperty" : [ "58" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "84"
+  }, {
+    "range" : "13",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "54",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "86"
+  }, {
+    "range" : "54",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "13",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "13",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "range" : "25",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "title",
+      "undefined" : "Title"
+    },
+    "domain" : "94",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "93"
+  }, {
+    "range" : "25",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "range" : "25",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "25",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://schema.org/image",
+    "baseIri" : "https://schema.org",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "image"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://schema.org/gender",
+    "baseIri" : "https://schema.org",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "gender",
+      "undefined" : "has gender"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/witnessed_event",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "witnessed_event",
+      "undefined" : "witnessed event"
+    },
+    "domain" : "4",
+    "subproperty" : [ "84", "57" ],
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/was_part_of",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "50",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "was_part_of",
+      "undefined" : "was part of"
+    },
+    "domain" : "50",
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://schema.org/name",
+    "baseIri" : "http://schema.org",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "name"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/agesOfWriting",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "agesOfWriting",
+      "undefined" : "ages of writing"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/lived_in",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "25",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lived_in",
+      "undefined" : "lived in"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://purl.org/dc/terms/publisher",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "publisher",
+      "undefined" : "is published by"
+    },
+    "domain" : "107",
+    "attributes" : [ "object", "external" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://schema.org/birthPlace",
+    "baseIri" : "https://schema.org",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "birthPlace",
+      "undefined" : "place of birth"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/familyName",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "familyName",
+      "undefined" : "Family Name"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/member",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "member",
+      "undefined" : "has Member"
+    },
+    "domain" : "80",
+    "attributes" : [ "object", "external" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://purl.org/NET/c4dm/event.owl#place",
+    "inverse" : "28",
+    "baseIri" : "http://purl.org/NET/c4dm/event.owl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "place",
+      "undefined" : "occurred in Place"
+    },
+    "domain" : "5",
+    "attributes" : [ "object", "external" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/controlled_by",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "80",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "controlled_by",
+      "undefined" : "was controlled by"
+    },
+    "domain" : "25",
+    "attributes" : [ "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/mentioned_In",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "37",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mentioned_In",
+      "undefined" : "is mentioned in"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/was_created_by",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "4",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "was_created_by",
+      "undefined" : "was created by"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "50",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/nationality",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "nationality",
+      "undefined" : "nationality"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/was_Born_In",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "25",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "was_Born_In",
+      "undefined" : "was born in"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://purl.org/dc/terms/creator",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "111",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "creator",
+      "undefined" : "creator of"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "4",
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://memorise.sdu.dk/semantics/ontology/wasOwnedBy",
+    "baseIri" : "https://memorise.sdu.dk/semantics/ontology",
+    "range" : "4",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3264-3687",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasOwnedBy",
+      "undefined" : "was owned by"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "50",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  } ]
+}

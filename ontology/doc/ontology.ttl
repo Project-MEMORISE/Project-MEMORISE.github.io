@@ -1,0 +1,535 @@
+@prefix : <https://memorise.sdu.dk/semantics/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://memorise.sdu.dk/semantics/ontology/> .
+
+<https://memorise.sdu.dk/semantics/ontology/> rdf:type owl:Ontology ;
+                                               owl:versionIRI <https://memorise.sdu.dk/semantics/ontology/v1/> ;
+                                               rdfs:comment "An ontology to represent historic and historiographic entities." ;
+                                               rdfs:label "MEMORISE ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2002/07/owl#equivalentClass
+owl:equivalentClass rdf:type owl:AnnotationProperty .
+
+
+###  https://memorise.sdu.dk/semantics/schemator/schematize
+<https://memorise.sdu.dk/semantics/schemator/schematize> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#agent
+<http://purl.org/NET/c4dm/event.owl#agent> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <http://purl.org/NET/c4dm/event.owl#isAgentIn> ;
+                                           rdfs:domain :Person ;
+                                           rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                           rdfs:label "has agent" .
+
+
+###  http://purl.org/NET/c4dm/event.owl#isAgentIn
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ,
+                                                           <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                               rdfs:range :Person ;
+                                               rdfs:label "is agent in" .
+
+
+###  http://purl.org/NET/c4dm/event.owl#place
+<http://purl.org/NET/c4dm/event.owl#place> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf :wasLocationOf ;
+                                           rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                           rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                           rdfs:label "occurred in Place" .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   rdfs:domain :Person ;
+                                   rdfs:range [ rdf:type owl:Class ;
+                                                owl:unionOf ( <http://purl.org/ontology/bibo/Document>
+                                                              :Content
+                                                            )
+                                              ] ;
+                                   <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+                                   rdfs:label "creator of" .
+
+
+###  http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://purl.org/ontology/bibo/DocumentPart> ;
+                                    rdfs:range <http://purl.org/ontology/bibo/Document> ;
+                                    rdfs:label "is Part Of" .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain [ rdf:type owl:Class ;
+                                                   owl:unionOf ( <http://purl.org/ontology/bibo/Document>
+                                                                 :Content
+                                                               )
+                                                 ] ;
+                                     rdfs:range :Organization ;
+                                     rdfs:label "is published by" .
+
+
+###  http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :Organization ;
+                                   rdfs:range :Person ;
+                                   rdfs:label "has Member" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/controlled_by
+:controlled_by rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+               rdfs:range :Organization ;
+               <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+               rdfs:label "was controlled by" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/initiated_event
+:initiated_event rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+                 <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+                 rdfs:label "initiated event" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/lived_in
+:lived_in rdf:type owl:ObjectProperty ;
+          rdfs:domain :Person ;
+          rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+          <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+          rdfs:label "lived in" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/mentioned_In
+:mentioned_In rdf:type owl:ObjectProperty ;
+              rdfs:domain :Historical ;
+              rdfs:range :Content ;
+              <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+              rdfs:label "is mentioned in" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/wasLocationOf
+:wasLocationOf rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+               rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+               <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+               rdfs:label "was location of" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/wasOwnedBy
+:wasOwnedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Physical_Object ;
+            rdfs:range :Person ;
+            <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+            rdfs:label "was owned by" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/was_Born_In
+:was_Born_In rdf:type owl:ObjectProperty ;
+             rdfs:domain :Person ;
+             rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+             rdfs:label "was born in" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/was_created_by
+:was_created_by rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Physical_Object ;
+                rdfs:range :Person ;
+                <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+                rdfs:label "was created by" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/was_part_of
+:was_part_of rdf:type owl:ObjectProperty ;
+             rdfs:domain :Physical_Object ;
+             rdfs:range :Physical_Object ;
+             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+             rdfs:label "was part of" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/was_perpetrator_of_event
+:was_perpetrator_of_event rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :witnessed_event ;
+                          rdfs:domain :Person ;
+                          rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+                          <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+                          rdfs:label "was perpetrator of event" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/was_victim_of_event
+:was_victim_of_event rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :witnessed_event ;
+                     rdfs:domain :Person ;
+                     rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+                     <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+                     rdfs:label "was victim of event" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/witnessed_event
+:witnessed_event rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+                 <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+                 rdfs:label "witnessed event" .
+
+
+###  https://schema.org/isPartOf
+<https://schema.org/isPartOf> rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( <http://purl.org/ontology/bibo/Document>
+                                                          :Document_Collection
+                                                        )
+                                          ] ;
+                              rdfs:range [ rdf:type owl:Class ;
+                                           owl:unionOf ( <http://dbpedia.org/ontology/Archive>
+                                                         :Document_Collection
+                                                       )
+                                         ] ;
+                              rdfs:label "is Contained In" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain [ rdf:type owl:Class ;
+                                               owl:unionOf ( <http://purl.org/ontology/bibo/Document>
+                                                             :Content
+                                                           )
+                                             ] ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:label "Title" .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Historical ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                              rdfs:range xsd:float ;
+                                              rdfs:label "has latitude" .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                               rdfs:range xsd:float ;
+                                               rdfs:label "has longitude" .
+
+
+###  http://xmlns.com/foaf/0.1/familyName
+<http://xmlns.com/foaf/0.1/familyName> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :Person ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:label "Family Name" .
+
+
+###  http://xmlns.com/foaf/0.1/givenName
+<http://xmlns.com/foaf/0.1/givenName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Person ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:label "Given Name" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/agesOfWriting
+:agesOfWriting rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Person ;
+               rdfs:range xsd:string ;
+               rdfs:label "ages of writing" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/eventDescription
+:eventDescription rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has event description" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/nationality
+:nationality rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Person ;
+             rdfs:range xsd:string ;
+             rdfs:label "nationality" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/pseudonym
+:pseudonym rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range xsd:string ;
+           rdfs:label "pseudonym" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/reasonOfPersecution
+:reasonOfPersecution rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Person ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "reason of persecution" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/time
+:time rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+      rdfs:range xsd:dateTime ;
+      rdfs:label "happened at" .
+
+
+###  https://schema.org/birthDate
+<https://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :Person ;
+                               rdfs:range [ rdf:type rdfs:Datatype ;
+                                            owl:unionOf ( xsd:dateTime
+                                                          xsd:string
+                                                        )
+                                          ] ;
+                               rdfs:label "Date of Birth" .
+
+
+###  https://schema.org/birthPlace
+<https://schema.org/birthPlace> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :Person ;
+                                rdfs:range xsd:string ;
+                                rdfs:label "place of birth" .
+
+
+###  https://schema.org/countryOfOrigin
+<https://schema.org/countryOfOrigin> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain :Person ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:label "country of origin" .
+
+
+###  https://schema.org/gender
+<https://schema.org/gender> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Person ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "has gender" .
+
+
+###  https://schema.org/hasOccupation
+<https://schema.org/hasOccupation> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :Person ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:label "has Ocupation" .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Person ;
+                           rdfs:range xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.cdec.it/lod/shoah/DetentionPlace
+<http://dati.cdec.it/lod/shoah/DetentionPlace> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                               <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> .
+
+
+###  http://dbpedia.org/ontology/Archive
+<http://dbpedia.org/ontology/Archive> rdf:type owl:Class ;
+                                      rdfs:subClassOf :Historiographic ;
+                                      rdfs:label "Archive" ;
+                                      <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  http://purl.org/NET/c4dm/event.owl#Event
+<http://purl.org/NET/c4dm/event.owl#Event> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Historical ;
+                                           rdfs:label "Event"@en ;
+                                           <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  http://purl.org/ontology/bibo/AudioDocument
+<http://purl.org/ontology/bibo/AudioDocument> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.org/ontology/bibo/Document> .
+
+
+###  http://purl.org/ontology/bibo/AudioVisualDocument
+<http://purl.org/ontology/bibo/AudioVisualDocument> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                                    rdfs:label "Video"@en .
+
+
+###  http://purl.org/ontology/bibo/Document
+<http://purl.org/ontology/bibo/Document> rdf:type owl:Class ;
+                                         rdfs:subClassOf :Historiographic ;
+                                         rdfs:label "Media Item" ;
+                                         <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  http://purl.org/ontology/bibo/DocumentPart
+<http://purl.org/ontology/bibo/DocumentPart> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                             rdfs:label "Document Section"@en .
+
+
+###  http://purl.org/ontology/bibo/Image
+<http://purl.org/ontology/bibo/Image> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                      rdfs:label "Image"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :Historical ;
+                                                       rdfs:label "Place"@en ;
+                                                       <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Barrack
+:Barrack rdf:type owl:Class ;
+         rdfs:subClassOf :Building ;
+         rdfs:label "Barrack"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+          rdfs:label "Building"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Compound
+:Compound rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+          rdfs:label "Compound"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Content
+:Content rdf:type owl:Class ;
+         rdfs:subClassOf :Historiographic ;
+         rdfs:label "Content Item" ;
+         <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Diary
+:Diary rdf:type owl:Class ;
+       rdfs:subClassOf :Content ;
+       <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+       rdfs:label "Diary" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Document_Collection
+:Document_Collection rdf:type owl:Class ;
+                     rdfs:subClassOf :Historiographic ;
+                     rdfs:label "Document Collection"@en ;
+                     <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Exhibition_Space
+:Exhibition_Space rdf:type owl:Class ;
+                  rdfs:subClassOf :Historiographic ;
+                  rdfs:label "Exhibition Space"@en ;
+                  <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Geographical_Feature
+:Geographical_Feature rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                      rdfs:label "Geographical Feature"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Historical
+:Historical rdf:type owl:Class ;
+            rdfs:label "Historical"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Historiographic
+:Historiographic rdf:type owl:Class ;
+                 rdfs:label "Historiographic"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Interview
+:Interview rdf:type owl:Class ;
+           rdfs:subClassOf :Content ;
+           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-3264-3687> ;
+           rdfs:label "Interview" .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Historical ;
+              rdfs:label "Organization" ;
+              <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Historical ;
+        rdfs:label "Person"@en ;
+        <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Physical
+:Physical rdf:type owl:Class ;
+          rdfs:subClassOf :Exhibition_Space ;
+          rdfs:label "Physical Exhibition Space"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Physical_Object
+:Physical_Object rdf:type owl:Class ;
+                 rdfs:subClassOf :Historical ;
+                 rdfs:label "Physical Object"@en ;
+                 <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/TextDocument
+:TextDocument rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+              rdfs:label "Text"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/Virtual
+:Virtual rdf:type owl:Class ;
+         rdfs:subClassOf :Exhibition_Space ;
+         rdfs:label "Virtual Exhibition Space"@en .
+
+
+###  https://memorise.sdu.dk/semantics/ontology/3D_Model
+<https://memorise.sdu.dk/semantics/ontology/3D_Model> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.org/ontology/bibo/Document> ;
+                                                      rdfs:label "3D Model"@en .
+
+
+###  https://www.ica.org/standards/RiC/ontology#Instantiation
+<https://www.ica.org/standards/RiC/ontology#Instantiation> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :Historiographic ;
+                                                           rdfs:label "Instantiation" ;
+                                                           <https://memorise.sdu.dk/semantics/schemator/schematize> "true"^^xsd:boolean .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
